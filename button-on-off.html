@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button ON/OFF</title>
+  <style>
+
+      .turn-on {
+        background-color: green;
+        color: white;
+        padding: 5px 21px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .turn-off {
+        background-color: black;
+        color: white;
+        padding: 5px 20px;
+        border: none;
+        border-radius: 5px;
+      }
+
+  </style>
+</head>
+<body>
+    <button onclick="turnOnOff()" class="turn-on">BUTTON</button>
+    
+
+    <script>
+
+      function turnOnOff(){
+        const buttonElement = document.querySelector('button');
+
+        if(buttonElement.classList.contains('turn-on')){
+          buttonElement.innerText = 'OFF';
+          buttonElement.classList.remove('turn-on');
+          buttonElement.classList.add('turn-off');
+
+        } else {
+          buttonElement.innerText = 'ON';
+          buttonElement.classList.remove('turn-off');
+          buttonElement.classList.add('turn-on');
+
+        }
+      }
+      
+
+    </script>
+</body>
+</html>
